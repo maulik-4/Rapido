@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-jskgo-yellow: #F4C430;
+  --color-jskgo-yellow-light: #FFDF6B;
+  --color-jskgo-yellow-dark: #D4A71B;
+  --color-jskgo-charcoal: #1A1A1A;
+  --color-jskgo-dark: #121212;
+}
+
+:root {
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+  color: #1A1A1A;
+}
+
+html.dark,
+html.dark body {
+  background-color: #121212;
+  color: #FAFAFA;
+}
+
+@layer components {
+  .btn-hover {
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, color 0.7s ease-in-out, background-color 0.3s ease;
+  }
+  
+  .btn-hover:hover, .btn-hover:focus-visible {
+    transform: translateY(-2px);
+  }
+
+  .btn-hover::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    transition: height 0.7s ease-in-out;
+    z-index: -1;
+  }
+
+  .btn-hover:hover::before, .btn-hover:focus-visible::before {
+    height: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn-hover, .btn-hover::before {
+      transition: none !important;
+      transform: none !important;
+    }
+  }
+
+  /* Fill Variations */
+  .btn-fill-dark::before {
+    background-color: #1A1A1A;
+  }
+  .dark .btn-fill-dark::before {
+    background-color: #FFFFFF;
+  }
+  .btn-hover.btn-fill-dark:hover, .btn-hover.btn-fill-dark:focus-visible {
+    color: #FFFFFF !important;
+  }
+  .dark .btn-hover.btn-fill-dark:hover, .dark .btn-hover.btn-fill-dark:focus-visible {
+    color: #1A1A1A !important;
+  }
+  
+  .btn-fill-yellow::before {
+    background-color: #F4C430;
+  }
+  .btn-hover.btn-fill-yellow:hover, .btn-hover.btn-fill-yellow:focus-visible {
+    color: #1A1A1A !important;
+  }
+
+  .btn-fill-light::before {
+    background-color: #F3F4F6;
+  }
+  .dark .btn-fill-light::before {
+    background-color: #374151;
+  }
+  .btn-hover.btn-fill-light:hover, .btn-hover.btn-fill-light:focus-visible {
+    color: #1A1A1A !important;
+  }
+  .dark .btn-hover.btn-fill-light:hover, .dark .btn-hover.btn-fill-light:focus-visible {
+    color: #FFFFFF !important;
+  }
+  
+  .btn-fill-white::before {
+    background-color: #FFFFFF;
+  }
+  .btn-hover.btn-fill-white:hover, .btn-hover.btn-fill-white:focus-visible {
+    color: #1A1A1A !important;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
