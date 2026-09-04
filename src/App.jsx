@@ -162,7 +162,7 @@ const TestimonialsCarousel = () => {
     { id: 2, name: 'Priya K.', loc: 'Vrindavan Visitor', text: 'Booked an Innova for our family temple tour. The driver was so polite and knew exactly where to drop us.' },
     { id: 3, name: 'Amit V.', loc: 'Agra', text: 'I use the Bike Taxi daily for my commute to the station. Always on time, always affordable.' },
     { id: 4, name: 'Neha S.', loc: 'Mathura', text: 'The app is so easy to use. My daily commute is sorted!' },
-    { id: 5, name: 'Vikram B.', loc: 'Delhi NCR', text: 'Clean cars and professional captains. Made my trip to Braj very comfortable.' }
+    { id: 5, name: 'Vikram B.', loc: 'Baldeo', text: 'Clean cars and professional captains. Made my trip to Braj very comfortable.' }
   ]);
 
   const handleNext = () => {
@@ -297,7 +297,7 @@ const CoverageVisual = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
           <div className="w-4 h-4 bg-[#F4C430] rounded-full animate-pulse shadow-[0_0_20px_#F4C430]" />
           <div className="mt-2 bg-black/80 backdrop-blur border border-white/10 text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">
-            Mathura Hub
+            Mathura City
           </div>
         </div>
 
@@ -313,12 +313,27 @@ const CoverageVisual = () => {
         
         <div className="absolute top-[30%] left-[80%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
           <div className="w-3 h-3 bg-[#F4C430] rounded-full shadow-[0_0_10px_#F4C430]" />
-          <div className="mt-2 text-white/70 text-[10px] font-bold tracking-widest uppercase">Delhi NCR</div>
+          <div className="mt-2 text-white/70 text-[10px] font-bold tracking-widest uppercase">Baldeo</div>
         </div>
 
         <div className="absolute top-[65%] left-[20%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
           <div className="w-3 h-3 bg-white rounded-full shadow-[0_0_10px_white]" />
           <div className="mt-2 text-white/70 text-[10px] font-bold tracking-widest uppercase">Govardhan</div>
+        </div>
+
+        <div className="absolute top-[18%] left-[55%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          <div className="w-3 h-3 bg-white rounded-full shadow-[0_0_10px_white]" />
+          <div className="mt-2 text-white/70 text-[10px] font-bold tracking-widest uppercase">Barsana</div>
+        </div>
+
+        <div className="absolute top-[12%] left-[70%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          <div className="w-3 h-3 bg-white rounded-full shadow-[0_0_10px_white]" />
+          <div className="mt-2 text-white/70 text-[10px] font-bold tracking-widest uppercase">Nandgaon</div>
+        </div>
+
+        <div className="absolute top-[82%] left-[42%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+          <div className="w-3 h-3 bg-white rounded-full shadow-[0_0_10px_white]" />
+          <div className="mt-2 text-white/70 text-[10px] font-bold tracking-widest uppercase">Gokul</div>
         </div>
       </div>
       
@@ -336,16 +351,16 @@ const CoverageVisual = () => {
 
 const VehicleVisual = () => (
   <div className="relative w-full h-full flex items-center justify-center">
-     <div className="absolute inset-0 bg-[#F4C430] opacity-10 dark:opacity-5 mix-blend-color" />
-     <div className="absolute inset-0 bg-gradient-to-t from-[#f8f9fa] dark:from-[#0a0a0a] via-transparent to-transparent" />
-     <div className="absolute inset-0 bg-gradient-to-l from-[#f8f9fa] dark:from-[#0a0a0a] via-transparent to-transparent" />
+    <div className="absolute inset-0 bg-[#F4C430] opacity-5 dark:opacity-5 mix-blend-color" />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#f8f9fa] dark:from-[#0a0a0a] via-transparent to-transparent opacity-70" />
+    <div className="absolute inset-0 bg-gradient-to-l from-[#f8f9fa] dark:from-[#0a0a0a] via-transparent to-transparent opacity-70" />
      
-     <svg viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full absolute inset-0 drop-shadow-[0_0_50px_rgba(244,196,48,0.2)]">
+    <svg viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-1/2 top-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 drop-shadow-[0_0_50px_rgba(244,196,48,0.2)]">
        <motion.path animate={{ x: [-20, 0] }} transition={{ repeat: Infinity, duration: 1, ease: "linear" }} d="M100 400L700 400" className="stroke-gray-300 dark:stroke-[#F4C430]/30" strokeWidth="4" strokeLinecap="round" strokeDasharray="20 40" />
        <motion.path animate={{ x: [-50, 0] }} transition={{ repeat: Infinity, duration: 0.5, ease: "linear" }} d="M50 450L750 450" className="stroke-gray-200 dark:stroke-white/10" strokeWidth="2" strokeLinecap="round" strokeDasharray="50 100" />
        
        <g transform="translate(300, 200) skewX(-15)">
-         <path d="M0 100 C 0 50, 50 0, 150 0 L 250 0 C 300 0, 350 50, 350 150 L 350 200 L 0 200 Z" className="fill-gray-200 dark:fill-[#1a1a1a]" />
+         <path d="M0 100 C 0 50, 50 0, 150 0 L 250 0 C 300 0, 350 50, 350 150 L 350 200 L 0 200 Z" className="fill-gray-300 dark:fill-[#1a1a1a]" />
          <path d="M150 20 L 240 20 L 330 100 L 150 100 Z" className="fill-white dark:fill-[#0a0a0a] stroke-gray-300 dark:stroke-white/20" strokeWidth="4" />
          <path d="M150 5 L 250 5" stroke="#F4C430" strokeWidth="6" strokeLinecap="round" />
          
@@ -566,7 +581,7 @@ const EditorialHero = () => {
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
 
   return (
-    <section className="relative w-full min-h-[100svh] bg-[#f8f9fa] dark:bg-[#0a0a0a] overflow-hidden flex flex-col pt-24 pb-8 lg:pt-32 transition-colors duration-500">
+    <section id="hero" className="relative w-full min-h-[100svh] bg-[#f8f9fa] dark:bg-[#0a0a0a] overflow-hidden flex flex-col pt-24 pb-8 lg:pt-32 transition-colors duration-500">
       {/* Background gradient/grain */}
       <motion.div 
          initial={{ opacity: 0 }}
@@ -645,7 +660,7 @@ const EditorialHero = () => {
             animate={{ clipPath: "inset(0 0 0 0)" }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             style={{ x: vehicleXDesktop }}
-            className="hidden lg:flex absolute right-[-5%] top-[15%] w-[60%] xl:w-[50%] aspect-[16/10] bg-white/40 dark:bg-white/5 rounded-3xl backdrop-blur-md border border-gray-200 dark:border-white/10 items-center justify-center overflow-hidden shadow-[0_0_100px_rgba(244,196,48,0.15)] origin-right"
+            className="hidden lg:flex absolute right-[-2%] top-[15%] w-[64%] xl:w-[54%] aspect-[16/10] bg-white/60 dark:bg-white/5 rounded-3xl backdrop-blur-md border border-gray-200 dark:border-white/10 items-center justify-center overflow-hidden shadow-[0_0_100px_rgba(244,196,48,0.15)] origin-right"
          >
             <VehicleVisual />
          </motion.div>
@@ -755,9 +770,9 @@ function Home() {
               style={{ height: isScrolled ? '3.5rem' : '5rem' }}
             >
               <motion.div layout className="flex items-center gap-2">
-                <span className={`font-extrabold tracking-tight transition-all duration-700 ${isScrolled ? 'text-2xl' : 'text-3xl'}`}>
+                <Link to="/#hero" aria-label="JSKGO home" className={`font-extrabold tracking-tight transition-all duration-700 ${isScrolled ? 'text-2xl' : 'text-3xl'}`}>
                   JSK<span className="text-[#F4C430]">GO</span>
-                </span>
+                </Link>
               </motion.div>
               
               <motion.div layout className="hidden md:flex items-center space-x-2 font-medium">
@@ -766,7 +781,8 @@ function Home() {
                   { name: 'Coverage', href: '#coverage' },
                   { name: 'Drive With Us', href: '#drive' },
                   { name: 'App', href: '#app' },
-                  { name: 'Help', href: '#faq' }
+                  { name: 'Help', href: '#faq' },
+                  { name: 'Contact', href: '#contact' }
                 ].map((link) => (
                   <a 
                     key={link.name}
@@ -822,6 +838,7 @@ function Home() {
             <Link to="/#drive" onClick={() => setIsMobileMenuOpen(false)}>Drive With Us</Link>
             <Link to="/#app" onClick={() => setIsMobileMenuOpen(false)}>App</Link>
             <Link to="/#faq" onClick={() => setIsMobileMenuOpen(false)}>Help</Link>
+            <Link to="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
             <Link to="/#book" onClick={() => setIsMobileMenuOpen(false)} className="btn-hover btn-fill-dark bg-[#F4C430] w-full py-4 rounded-xl mt-auto mb-12 shadow-lg text-center">
               Book a Ride
             </Link>
@@ -957,20 +974,17 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">We Serve All of <span className="text-[#F4C430]">Braj & North India</span></h2>
+              <h2 className="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">We Serve <span className="text-[#F4C430]">Braj</span></h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                Whether you need a quick ride across town or a comfortable outstation cab, our verified network spans across key cities and sacred towns.
+                Reliable rides across Mathura City, Vrindavan, Govardhan, Barsana, Nandgaon, Gokul, Baldeo, and Agra.
               </p>
               
               <div className="flex flex-wrap gap-3">
-                {['Mathura', 'Vrindavan', 'Govardhan', 'Barsana', 'Nandgaon', 'Gokul', 'Agra', 'Delhi NCR'].map(city => (
+                {['Mathura City', 'Vrindavan', 'Govardhan', 'Barsana', 'Nandgaon', 'Gokul', 'Baldeo', 'Agra'].map(city => (
                   <span key={city} className="bg-gray-200 dark:bg-white/10 px-4 py-2 rounded-full font-medium text-sm border border-gray-300 dark:border-white/10 backdrop-blur-sm hover:bg-gray-300 dark:hover:bg-white/20 transition-colors">
                     {city}
                   </span>
                 ))}
-                <span className="bg-transparent px-4 py-2 text-[#F4C430] font-medium text-sm">
-                  + 10 more cities
-                </span>
               </div>
             </div>
 
@@ -1037,7 +1051,7 @@ function Home() {
               { title: 'Temple Visits', desc: 'Hassle-free drops near major temples.', color: 'bg-orange-100 dark:bg-orange-900/30 dark:border-orange-500/20' },
               { title: 'Daily Commutes', desc: 'Beat the traffic with quick Bike Taxis.', color: 'bg-blue-100 dark:bg-blue-900/30 dark:border-blue-500/20' },
               { title: 'Family Pilgrimage', desc: 'Spacious SUVs for your whole group.', color: 'bg-purple-100 dark:bg-purple-900/30 dark:border-purple-500/20' },
-              { title: 'Airport Transfers', desc: 'Timely trips to Agra & Delhi airports.', color: 'bg-green-100 dark:bg-green-900/30 dark:border-green-500/20' }
+              { title: 'Airport Transfers', desc: 'Timely trips to Agra airport.', color: 'bg-green-100 dark:bg-green-900/30 dark:border-green-500/20' }
             ].map((useCase, i) => (
               <TiltCard key={i} className={`${useCase.color} rounded-2xl p-8 cursor-pointer border border-black/5 dark:border-white/5`}>
                 <div className="bg-white/50 dark:bg-black/30 w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg mb-6 backdrop-blur-sm dark:text-white">
@@ -1174,9 +1188,9 @@ function Home() {
             <div>
               <h2 className="text-4xl lg:text-5xl font-extrabold mb-6 text-[#1A1A1A] dark:text-white">Questions?<br/>We've got answers.</h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">Everything you need to know about riding and driving with JSKGO.</p>
-              <button className="text-lg font-bold flex items-center gap-2 text-[#1A1A1A] dark:text-white hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">
+              <a href="tel:+919634364324" className="text-lg font-bold flex items-center gap-2 text-[#1A1A1A] dark:text-white hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">
                 Contact Support <ArrowRight size={20} />
-              </button>
+              </a>
             </div>
             
             <div className="space-y-4">
@@ -1188,34 +1202,160 @@ function Home() {
         </div>
       </section>
 
-      {/* BLOG / EDITORIAL */}
-      <section id="editorial" className="py-24 bg-gray-50 dark:bg-[#181818] transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-12">
-            <h2 className="text-4xl font-extrabold text-[#1A1A1A] dark:text-white">Travel Smart in Mathura</h2>
-            <button className="hidden md:flex font-bold hover:text-[#F4C430] dark:text-white dark:hover:text-[#F4C430] items-center gap-2 transition-colors">
-              View All Posts <ArrowRight size={20} />
-            </button>
+      
+      {/* EDITORIAL EXPERIENCES SECTION */}
+      <section id="experiences" className="py-16 md:py-24 lg:py-32 bg-gray-50 dark:bg-[#181818] transition-colors duration-300 overflow-hidden relative">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="max-w-3xl mb-16 md:mb-24 relative z-10">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1A1A1A] dark:text-white leading-tight mb-6">Built for the Way You Travel in Braj</h2>
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-medium">Tailored experiences for every kind of journey.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-6 xl:gap-10 pb-4 md:pb-20 lg:pb-32">
             {[
-              { title: 'Best Time to Visit Mathura & Vrindavan', tag: 'GUIDE', img: 'data:image/jpeg;base64,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' },
-              { title: 'Top 10 Temples in Vrindavan', tag: 'CULTURE', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRZb0BQm7bv1S15m3cBlkxY1MtVeSYH8_8L5wPDhF-Km-WJ7I_RnC_gnSG&s=10' },
-              { title: 'Mathura to Agra Cab Guide', tag: 'TRAVEL', img: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80&w=800' },
-              { title: 'Travel During Holi in Mathura', tag: 'FESTIVALS', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk9pho6nSYbiXs469E9NsyhlmjiI-_9H8JVua7HiCqfA&s=10' }
-            ].map((post, i) => (
-              <TiltCard key={i} className="bg-white dark:bg-[#222222] rounded-2xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-800 group cursor-pointer hover:shadow-xl dark:hover:shadow-white/5 transition-shadow duration-300">
-                <div className="h-48 bg-gray-200 dark:bg-gray-800 relative overflow-hidden">
-                  <img src={post.img} alt={post.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+              {
+                num: '01',
+                title: 'Temple Visits',
+                desc: 'Hassle-free drops near major temples.',
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAV7Bx8dW_D17bIeT3X92r94b-viCOZWIrrL_kKRg6cA&s=10'
+              },
+              {
+                num: '02',
+                title: 'Daily Commutes',
+                desc: 'Beat the traffic with quick Bike Taxis.',
+                img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtcwr61xBAtBAqeLDIKOtkNtMhxBScqX6SB_ne74K_hw&s=10'
+              },
+              {
+                num: '03',
+                title: 'Family Pilgrimage',
+                desc: 'Spacious SUVs for your whole group.',
+                img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=800'
+                  },
+              {
+                num: '04',
+                title: 'Airport Transfers',
+                desc: 'Timely trips to Agra airport.',
+                img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800'
+              }
+            ].map((card, index) => (
+              <div 
+                key={card.num} 
+                className={`relative group flex flex-col ${index % 2 === 1 ? 'md:translate-y-16 lg:translate-y-24' : ''}`}
+              >
+                {/* Oversized Number Background */}
+                <div className="absolute -top-16 -right-4 md:-top-20 md:-left-4 lg:-top-24 lg:-left-8 text-[120px] md:text-[140px] lg:text-[180px] font-black text-gray-400/25 dark:text-gray-500/20 leading-none select-none z-0 pointer-events-none transition-all duration-300">
+                  {card.num}
                 </div>
-                <div className="p-6">
-                  <div className="text-xs font-bold text-[#F4C430] tracking-wider mb-3">{post.tag}</div>
-                  <h3 className="text-lg font-bold text-[#1A1A1A] dark:text-white group-hover:text-[#F4C430] dark:group-hover:text-[#F4C430] transition-colors">{post.title}</h3>
+
+                {/* Card Content */}
+                <div className="relative z-10 flex-1 flex flex-col bg-white dark:bg-[#222222] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border border-gray-100 dark:border-white/5 transition-all duration-500 group-hover:-translate-y-2">
+                  
+                  {/* Image Container */}
+                  <div className="relative h-[250px] sm:h-[300px] md:h-[260px] lg:h-[280px] xl:h-[340px] w-full overflow-hidden bg-gray-200 dark:bg-gray-800">
+                    <img 
+                      src={card.img} 
+                      alt={card.title} 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-extrabold text-[#1A1A1A] dark:text-white mb-3 tracking-tight group-hover:text-[#F4C430] dark:group-hover:text-[#F4C430] transition-colors duration-300">
+                        {card.title}
+                      </h3>
+                      <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 font-medium leading-relaxed">
+                        {card.desc}
+                      </p>
+                    </div>
+                    
+                    {/* Arrow Button */}
+                    <div className="mt-8 flex items-center justify-end">
+                      <button 
+                        aria-label={`Explore ${card.title}`}
+                        className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center text-[#1A1A1A] dark:text-white group-hover:bg-[#F4C430] group-hover:text-black transition-colors duration-300 shadow-sm"
+                      >
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M5 12h14"></path>
+                          <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </TiltCard>
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section id="contact" className="py-24 bg-white dark:bg-[#121212] transition-colors duration-300 border-t border-gray-200 dark:border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-extrabold mb-6 text-[#1A1A1A] dark:text-white">Get in Touch</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
+                Have a question or need assistance? Our support team is here for you around the clock.
+              </p>
+              
+              <div className="space-y-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <span className="text-2xl">📍</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1A1A1A] dark:text-white mb-1">Office Location</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Mathura, Uttar Pradesh – 281001</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <span className="text-2xl">📞</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1A1A1A] dark:text-white mb-1">Phone Support</h3>
+                    <a href="tel:+919634364324" className="text-[#F4C430] hover:text-black dark:hover:text-white transition-colors font-medium text-lg">+91 96343 64324</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <span className="text-2xl">✉️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1A1A1A] dark:text-white mb-1">Email Us</h3>
+                    <a href="mailto:support@jskks.com" className="text-[#F4C430] hover:text-black dark:hover:text-white transition-colors font-medium text-lg">support@jskks.com</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center shrink-0">
+                    <span className="text-2xl">🕐</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1A1A1A] dark:text-white mb-1">Working Hours</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Available 24 hours · 7 days</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden bg-gray-100 dark:bg-[#1a1a1a] border border-gray-200 dark:border-white/5 flex items-center justify-center shadow-xl group">
+               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598282361668-967b07dbd651?auto=format&fit=crop&q=80&w=800')] bg-cover bg-center opacity-30 dark:opacity-20 grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+               <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-[#121212] via-white/50 dark:via-[#121212]/50 to-transparent" />
+               <div className="relative z-10 text-center px-6">
+                 <div className="w-20 h-20 bg-[#F4C430] rounded-full mx-auto flex items-center justify-center shadow-lg mb-6 shadow-[#F4C430]/20">
+                    <span className="text-3xl">📍</span>
+                 </div>
+                 <h3 className="text-2xl font-black text-[#1A1A1A] dark:text-white mb-2">Based in Braj</h3>
+                 <p className="text-gray-700 dark:text-gray-300 font-medium max-w-sm mx-auto">Proudly serving Mathura City, Vrindavan, Govardhan, Barsana, Nandgaon, Gokul, Baldeo, and Agra with reliable, 24/7 transportation.</p>
+               </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1241,7 +1381,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
             <div className="col-span-2 lg:col-span-2">
-              <span className="text-4xl font-extrabold tracking-tight mb-6 block">JSK<span className="text-[#F4C430]">GO</span></span>
+              <Link to="/#hero" aria-label="JSKGO home" className="text-4xl font-extrabold tracking-tight mb-6 block w-fit">JSK<span className="text-[#F4C430]">GO</span></Link>
               <p className="text-gray-400 mb-6 max-w-sm">
 Mathura's homegrown ride platform — bike taxi, auto & cab booking for the Braj region. Fast, safe, no-surge pricing.
 
@@ -1274,7 +1414,7 @@ Mathura's homegrown ride platform — bike taxi, auto & cab booking for the Braj
               <h4 className="font-bold mb-6 text-lg">Support</h4>
               <ul className="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
                 <li><Link to="/#faq" className="hover:text-black dark:hover:text-white transition-colors">Help Center</Link></li>
-                <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Contact Us</a></li>
+                <li><Link to="/#contact" className="hover:text-black dark:hover:text-white transition-colors">Contact Us</Link></li>
                 <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Safety</a></li>
               </ul>
             </div>
@@ -1284,7 +1424,7 @@ Mathura's homegrown ride platform — bike taxi, auto & cab booking for the Braj
               <ul className="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
                 <li><Link to="/terms" className="hover:text-black dark:hover:text-white transition-colors">Terms of Service</Link></li>
                 <li><Link to="/privacy" className="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Cookie Policy</a></li>
+                <li><Link to="/cookies" className="hover:text-black dark:hover:text-white transition-colors">Cookie Policy</Link></li>
               </ul>
             </div>
           </div>
@@ -1355,13 +1495,72 @@ function Terms() {
     <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
       <div className="max-w-4xl mx-auto prose dark:prose-invert">
         <h1 className="text-4xl lg:text-5xl font-extrabold mb-8 text-[#1A1A1A] dark:text-white">Terms of Service</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">Last updated: September 2026</p>
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">Last Updated: January 9, 2026</p>
         <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300">
-          <p>Welcome to JSKGO. By accessing or using our platform, you agree to be bound by these terms.</p>
-          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">1. Acceptance of Terms</h2>
-          <p>By downloading our app or using our services, you confirm that you accept these terms of service.</p>
-          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">2. User Conduct</h2>
-          <p>Users are expected to behave respectfully towards captains and follow all safety guidelines.</p>
+          <p>These Terms of Service ("Terms") govern your access to and use of the JSKGO mobile application, website, and taxi booking and ride-sharing services (collectively, the "Services") provided by JSKKS Ji Vrindavan Services Solution Private Limited ("JSKGO", "we", "us", or "our").</p>
+          <p>By accessing or using the JSKGO Platform, you agree to be bound by these Terms and our <Link to="/privacy" className="text-[#F4C430] hover:underline">Privacy Policy</Link> and <Link to="/cookies" className="text-[#F4C430] hover:underline">Cookie Policy</Link>. If you do not agree, do not use the Platform or Services.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">1. Eligibility and Accounts</h2>
+          <p>You must be at least 18 years old and legally able to enter into these Terms to use the Services. You are responsible for providing accurate information, keeping your account credentials confidential, and all activity under your account. Notify us promptly if you believe your account has been used without authorization.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">2. Our Services</h2>
+          <p>JSKGO provides a technology platform that connects Customers with independent third-party Captains and Vendor Partners. We facilitate bookings, communications, payments, and support. Unless expressly stated otherwise, JSKGO is not the driver or direct provider of transportation services.</p>
+          <p>Service availability, vehicle types, estimated arrival times, and routes may vary by location, demand, traffic, weather, and other conditions. We do not guarantee that a Captain or vehicle will always be available.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">3. Bookings, Fares, and Payments</h2>
+          <ul className="list-disc pl-6 space-y-2"><li>When you request a ride, you agree to provide correct pickup, drop-off, date, and passenger details.</li><li>Fares may be estimated before booking and can depend on distance, time, vehicle type, tolls, waiting time, and applicable taxes or fees.</li><li>Payment may be made using supported digital payment methods or cash, as shown at booking. Third-party payment processors handle payment information according to their own terms.</li><li>You authorize JSKGO or its payment processors to charge the selected payment method for amounts due.</li><li>You must not use fraudulent payment methods or dispute a valid charge without a legitimate reason.</li></ul>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">4. Cancellations and Refunds</h2>
+          <p>You may cancel a booking through the Platform. A cancellation fee, waiting fee, or other applicable charge may apply where disclosed during booking or required because a Captain has already started travelling to the pickup point. Refunds, where approved, are returned through the original payment method and may be subject to payment-provider timelines.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">5. Customer Responsibilities</h2>
+          <ul className="list-disc pl-6 space-y-2"><li>Be ready at the confirmed pickup location and treat Captains, other passengers, and support staff respectfully.</li><li>Follow applicable laws, traffic rules, safety instructions, and vehicle capacity limits.</li><li>Do not damage, misuse, or leave hazardous, illegal, or prohibited items in a vehicle.</li><li>Do not use the Services to harass, threaten, discriminate against, defraud, or harm another person.</li><li>Provide truthful information and do not create duplicate, impersonating, or unauthorized accounts.</li></ul>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">6. Captain and Vendor Partner Responsibilities</h2>
+          <p>Captains and Vendor Partners are independent third-party service providers. They are responsible for maintaining valid licences, registrations, insurance, permits, vehicle safety, and compliance with applicable laws. Captains must provide services professionally and must not discriminate, abuse, or endanger Customers.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">7. Safety and Emergencies</h2>
+          <p>Use the Platform's safety and emergency features where available. In an immediate emergency, contact local emergency services first. JSKGO may monitor rides, share relevant information, and cooperate with authorities to protect users and the public, as described in our Privacy Policy.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">8. Communications and Reviews</h2>
+          <p>By using the Services, you agree to receive service-related calls, messages, emails, and notifications. You may control promotional communications through the available settings. Reviews and feedback must be honest, relevant, and free of abusive, illegal, or confidential content. You grant JSKGO a non-exclusive right to use feedback to improve the Services.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">9. Platform Use and Intellectual Property</h2>
+          <p>The Platform, including its software, design, text, logos, graphics, and content, belongs to JSKGO or its licensors and is protected by applicable law. We grant you a limited, personal, non-transferable, revocable licence to use the Platform for its intended purpose. You must not copy, reverse engineer, scrape, resell, interfere with, or introduce malicious code into the Platform.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">10. Suspension and Termination</h2>
+          <p>We may suspend or terminate access to an account or the Services if you breach these Terms, provide false information, create a safety or legal risk, engage in fraud or abuse, or where necessary to protect the Platform. You may stop using the Services or request account deletion as described in the Privacy Policy. Provisions that by their nature should continue will survive termination.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">11. Disclaimers and Limitation of Liability</h2>
+          <p>The Services are provided on an "as available" basis. To the extent permitted by law, JSKGO does not guarantee uninterrupted, error-free, or fully accurate Services, availability of a particular Captain, or a specific journey time. Nothing in these Terms excludes liability that cannot lawfully be excluded. To the extent permitted by law, JSKGO will not be liable for indirect, incidental, special, or consequential loss arising from use of the Platform or third-party transportation services.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">12. Indemnity</h2>
+          <p>To the extent permitted by law, you agree to indemnify and hold harmless JSKGO, its officers, employees, and partners from claims, losses, liabilities, and expenses arising from your breach of these Terms, misuse of the Platform, or violation of another person's rights or applicable law.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">13. Changes to These Terms</h2>
+          <p>We may update these Terms from time to time. We will post the revised Terms on the Platform and update the "Last Updated" date. Your continued use of the Services after changes take effect constitutes acceptance of the revised Terms.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">14. Governing Law and Contact</h2>
+          <p>These Terms are governed by the applicable laws of India. Questions about these Terms may be sent to <a href="mailto:nodaloffice@jskks.com" className="text-[#F4C430] hover:underline">nodaloffice@jskks.com</a>.</p>
+          <p className="font-semibold">JSKKS Ji Vrindavan Services Solution Private Limited<br />Last Updated: January 9, 2026</p>
+          <Link to="/" className="inline-block mt-8 text-[#F4C430] font-bold hover:underline">&larr; Back to Home</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Cookies() {
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
+      <div className="max-w-4xl mx-auto prose dark:prose-invert">
+        <h1 className="text-4xl lg:text-5xl font-extrabold mb-8 text-[#1A1A1A] dark:text-white">Cookie Policy</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">Last Updated: January 9, 2026</p>
+        <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300">
+          <p>This Cookie Policy explains how JSKKS Ji Vrindavan Services Solution Private Limited ("JSKGO", "we", "us", or "our") uses cookies and similar technologies on the JSKGO website, mobile application, and related Services.</p>
+          <p>Cookies are small text files stored on your device. Similar technologies include pixel tags, web beacons, local storage, device identifiers, and software development kits. They help us remember choices, keep the Platform secure, understand usage, and improve our Services.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">1. Types of Technologies We Use</h2>
+          <ul className="list-disc pl-6 space-y-2"><li><strong>Strictly necessary technologies:</strong> Support authentication, account sessions, security, fraud prevention, booking, payments, and core Platform functions. These cannot generally be disabled without affecting the Services.</li><li><strong>Preference technologies:</strong> Remember settings such as language, location choices, and display preferences.</li><li><strong>Analytics technologies:</strong> Help us understand pages viewed, features used, performance, traffic, and errors so we can improve the Platform.</li><li><strong>Marketing technologies:</strong> Help measure campaigns and provide relevant offers or advertisements where permitted. We do not sell your personal information.</li></ul>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">2. Why We Use Cookies</h2>
+          <p>We use cookies and similar technologies to remember preferences and settings, authenticate your identity and maintain sessions, protect against fraud and unauthorized activity, process bookings and payments, analyze usage and measure marketing effectiveness, provide personalized content, and diagnose technical problems.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">3. Third-Party Technologies</h2>
+          <p>Some service providers may place or access technologies on our behalf, including providers of hosting, analytics, mapping, payment, communications, customer support, and advertising services. Their use of information is governed by their own privacy policies and applicable agreements.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">4. Your Choices</h2>
+          <p>You can manage cookies through your browser settings, delete stored cookies, restrict third-party cookies, or use device privacy controls. You can manage app permissions and reset advertising identifiers through your device settings. Disabling or deleting cookies may prevent login, booking, payment, or other features from working correctly.</p>
+          <p>Where a consent tool is provided, you can change your optional cookie preferences through that tool. Strictly necessary technologies will continue to operate because they are required to provide requested Services.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">5. Retention and Privacy</h2>
+          <p>Cookie and device data may be retained for different periods depending on its purpose. We retain and protect information in accordance with our <Link to="/privacy" className="text-[#F4C430] hover:underline">Privacy Policy</Link>, which explains how we collect, use, share, and protect personal information.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">6. Changes to This Policy</h2>
+          <p>We may update this Cookie Policy when our technology, Services, or legal obligations change. We will post the revised Policy with a new "Last Updated" date. Please review it periodically.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">7. Contact Us</h2>
+          <p>For questions about this Cookie Policy or our data practices, contact our Grievance Officer, Mohit Garg, at <a href="mailto:nodaloffice@jskks.com" className="text-[#F4C430] hover:underline">nodaloffice@jskks.com</a>.</p>
+          <p className="font-semibold">JSKKS Ji Vrindavan Services Solution Private Limited<br />Last Updated: January 9, 2026</p>
           <Link to="/" className="inline-block mt-8 text-[#F4C430] font-bold hover:underline">&larr; Back to Home</Link>
         </div>
       </div>
@@ -1374,13 +1573,173 @@ function Privacy() {
     <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
       <div className="max-w-4xl mx-auto prose dark:prose-invert">
         <h1 className="text-4xl lg:text-5xl font-extrabold mb-8 text-[#1A1A1A] dark:text-white">Privacy Policy</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">Last updated: September 2026</p>
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">Last Updated: January 9, 2026</p>
         <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300">
-          <p>Your privacy is important to us. This policy outlines how we collect, use, and protect your data.</p>
-          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">1. Data Collection</h2>
-          <p>We collect location data to provide rides and contact information for account management.</p>
-          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">2. Data Security</h2>
-          <p>All personal information is encrypted and stored securely.</p>
+          <p>Your privacy matters to JSKKS Ji Vrindavan Services Solution Private Limited (the "Company", "we", "JSKGO", "us" or "our").</p>
+          <p>This Privacy Policy ("Policy") describes how we collect, use, process, store, share, and protect your information, including personal information and sensitive personal data ("Information"), when you use the JSKGO mobile application ("JSKGO App"), our website at <a href="https://jskgo.com/" target="_blank" rel="noopener noreferrer" className="text-[#F4C430] hover:underline">jskgo.com</a> (collectively, the "JSKGO Platform"), or our taxi booking and ride-sharing services ("Services").</p>
+          <p>The terms "you" and "your" refer to Captains (drivers), Customers (riders), Vendor Partners, or any other user of the JSKGO Platform and Services.</p>
+          <p>Please read this Policy carefully before using the JSKGO Platform or Services. By using our Platform or Services, you agree to this Policy.</p>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">1. User Acceptance and Consent</h2>
+          <p>By accessing or using the JSKGO Platform or Services, you agree and consent to this Policy and the collection, use, and disclosure of your information as described herein. This includes our collection and use of location data as detailed in Section 3 below.</p>
+          <p>If you do not agree with this Policy, please do not use or access the JSKGO Platform or Services.</p>
+          <p>You represent and warrant that:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>All Information you provide is accurate, current, and complete.</li>
+            <li>You have all necessary rights and consents to provide such Information.</li>
+            <li>Your use of our Services complies with all applicable laws and regulations.</li>
+            <li>If you provide information about others, you have their consent to do so.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">2. Definitions</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Captains:</strong> Independent third-party drivers who provide transportation services to Customers through the JSKGO Platform.</li>
+            <li><strong>Customers:</strong> Users who book rides or other transportation services through the JSKGO Platform.</li>
+            <li><strong>Vendor Partners:</strong> Third-party vehicle providers who offer vehicle rentals through the JSKGO Platform.</li>
+            <li><strong>Personal Information:</strong> Information that identifies or can be used to identify an individual person.</li>
+            <li><strong>Location Data:</strong> Precise or approximate geographic location information derived from GPS, Wi-Fi, Bluetooth, cellular towers, or IP address.</li>
+            <li><strong>Device:</strong> Any computer, mobile phone, tablet, or other electronic device used to access our Services.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">3. Location Data Collection and Use</h2>
+          <p><strong>IMPORTANT: Location Data Disclosure</strong></p>
+          <p>We collect, use, and share your location data to provide our core taxi booking and ride services. Location access is essential for the functioning of our Services.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">3.1 What Location Data We Collect</h3>
+          <p>We collect precise and approximate location data, including:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>GPS location:</strong> Precise geographic coordinates from your device's GPS sensor.</li>
+            <li><strong>Wi-Fi and Bluetooth signals:</strong> Location information from nearby Wi-Fi networks and Bluetooth beacons.</li>
+            <li><strong>Cell tower location:</strong> Approximate location based on cellular network towers.</li>
+            <li><strong>IP address location:</strong> General location derived from your internet connection.</li>
+            <li><strong>Address information:</strong> Pickup and drop-off locations you enter manually.</li>
+          </ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">3.2 When We Collect Location Data</h3>
+          <p><strong>For Customers:</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>When you open the JSKGO App to show available drivers nearby.</li>
+            <li>When you request a ride to match you with nearby Captains.</li>
+            <li>During an active ride to track the route and provide navigation.</li>
+            <li>When the app is running in the background, if you have enabled background location access.</li>
+          </ul>
+          <p><strong>For Captains:</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>When you are online and available for ride requests.</li>
+            <li>During an active ride for navigation, route tracking, and customer visibility.</li>
+            <li>When the app is running in the background while you are online.</li>
+            <li>For safety monitoring and ride verification purposes.</li>
+          </ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">3.3 How We Use Location Data</h3>
+          <p>We use your location data for the following purposes:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Core Service Delivery:</strong> Matching Customers with nearby available Captains, calculating estimated arrival times and ride fares, providing turn-by-turn navigation to Captains, displaying real-time location of your Captain and vehicle, and optimizing pickup and drop-off locations.</li>
+            <li><strong>Safety and Security:</strong> Emergency assistance and location sharing with emergency contacts, monitoring rides for safety purposes, investigating accidents, disputes, or fraudulent activities, and verifying ride completion at the correct location.</li>
+            <li><strong>Service Improvement:</strong> Analyzing traffic patterns and demand in different areas, improving route suggestions and ETAs, identifying service coverage gaps, and enhancing map accuracy and point-of-interest data.</li>
+            <li><strong>Customer Support:</strong> Resolving trip-related queries and disputes, verifying pickup and drop-off locations, and assisting with lost item recovery.</li>
+            <li><strong>Marketing and Personalization:</strong> Service-related notifications and offers relevant to your current city or service area, personalized recommendations, and relevant content based on your location.</li>
+          </ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">3.4 Location Data Sharing</h3>
+          <p>We share your location data with:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Captains and Customers:</strong> During a ride, we share real-time location between the Customer and assigned Captain.</li>
+            <li><strong>Emergency Services:</strong> When you use emergency features or in case of safety incidents.</li>
+            <li><strong>Service Providers:</strong> Third-party mapping, navigation, and analytics providers who help us deliver Services.</li>
+            <li><strong>Business Partners:</strong> As necessary to provide co-branded or integrated services.</li>
+            <li><strong>Legal Authorities:</strong> When required by law or to protect safety and legal rights.</li>
+          </ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">3.5 Managing Location Permissions</h3>
+          <p>You can control location access through your device settings:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>iOS: Settings &gt; Privacy &amp; Security &gt; Location Services &gt; JSKGO.</li>
+            <li>Android: Settings &gt; Location &gt; App permissions &gt; JSKGO.</li>
+          </ul>
+          <p><strong>Important Note:</strong> If you disable location access, you will not be able to use our core ride booking and navigation features. Customers cannot request rides, and Captains cannot receive or complete ride requests without location services enabled.</p>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">4. Other Information We Collect</h2>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">4.1 Account Information</h3>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Name, email address, phone number.</li>
+            <li>Profile photo and user ID.</li>
+            <li>Postal address and saved locations (home, work, favorites).</li>
+            <li>Payment information: We do not store your card or bank details. Payments are processed securely by third-party payment processors such as Stripe and Razorpay, who handle your payment information according to their own privacy policies.</li>
+            <li>Government-issued identification documents (Aadhaar, PAN, Driver's License, Vehicle Registration).</li>
+            <li>Date of birth and age verification.</li>
+          </ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">4.2 Background Check Information (for Captains)</h3>
+          <ul className="list-disc pl-6 space-y-2"><li>Driver's license and driving history.</li><li>Vehicle registration and insurance documents.</li><li>Criminal background checks, where permitted by law.</li><li>Verification photos and selfies.</li><li>Right-to-work documentation.</li></ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">4.3 Transaction and Ride Information</h3>
+          <ul className="list-disc pl-6 space-y-2"><li>Ride history (date, time, pickup/drop-off locations, distance, duration).</li><li>Payment transactions and billing records.</li><li>Ratings and reviews given and received.</li><li>Communication between Customers and Captains via in-app calling or messaging.</li><li>Fare calculations and promotional code usage.</li></ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">4.4 Device and Usage Information</h3>
+          <ul className="list-disc pl-6 space-y-2"><li>Device type, model, manufacturer, and operating system.</li><li>Device identifiers such as Android Advertising ID or app-generated identifiers, where permitted by law.</li><li>Mobile network information (carrier, connection type).</li><li>IP address and browser type.</li><li>App version and crash logs.</li><li>Usage patterns (features used, pages viewed, time spent).</li><li>Sensor data (accelerometer, gyroscope for detecting motion and ride quality).</li></ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">4.5 Communication Data</h3>
+          <ul className="list-disc pl-6 space-y-2"><li>Customer support interactions (emails, chat transcripts, call recordings).</li><li>Call and SMS metadata when using in-app calling or messaging (timestamp, duration, but not content).</li><li>Feedback, ratings, and complaints.</li><li>Marketing preferences and communication history.</li></ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">4.6 Cookies and Similar Technologies</h3>
+          <p>We use cookies, pixel tags, web beacons, and similar technologies to:</p>
+          <ul className="list-disc pl-6 space-y-2"><li>Remember your preferences and settings.</li><li>Authenticate your identity and maintain sessions.</li><li>Analyze usage patterns and measure marketing effectiveness.</li><li>Provide personalized content and advertisements.</li><li>Detect and prevent fraud.</li></ul>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">4.7 Information from Third Parties</h3>
+          <ul className="list-disc pl-6 space-y-2"><li>Social media profile information, if you connect social accounts.</li><li>Payment verification from payment processors.</li><li>Identity verification from background check providers.</li><li>Marketing and analytics data from advertising partners.</li><li>Public records and databases for verification purposes.</li></ul>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">5. How We Use Your Information</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Service Delivery:</strong> Process and fulfill ride bookings, match Customers with Captains, facilitate payment processing and billing, provide navigation and route optimization, enable in-app communication between users, and send booking confirmations, receipts, and ride updates.</li>
+            <li><strong>Safety and Security:</strong> Verify identity of users, conduct background checks on Captains, monitor rides for safety purposes, detect and prevent fraud, abuse, and illegal activities, respond to emergencies and safety incidents, and investigate accidents, disputes, and insurance claims.</li>
+            <li><strong>Customer Support:</strong> Respond to inquiries, complaints, and support requests; resolve disputes; assist with lost items and refund requests; and provide technical assistance.</li>
+            <li><strong>Service Improvement and Analytics:</strong> Analyze usage trends and user behavior, improve app functionality and user experience, develop new features and services, conduct research and testing, and optimize pricing and demand forecasting.</li>
+            <li><strong>Marketing and Communications:</strong> Send promotional offers, discounts, and announcements; provide personalized recommendations; conduct surveys; run contests, sweepstakes, and referral programs; and deliver targeted advertisements.</li>
+            <li><strong>Legal and Compliance:</strong> Comply with applicable laws and regulations, respond to legal requests and court orders, enforce our terms and conditions, protect our rights, property, and safety, and maintain records for tax and accounting purposes.</li>
+          </ul>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">6. How We Share Your Information</h2>
+          <p>We do not sell your personal information. We share your information only in the following circumstances:</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">6.1 Between Customers and Captains</h3>
+          <p>During a ride, we share first name, profile photo, location, vehicle details, and contact information through anonymized in-app calling. After a ride, we share limited information for ratings, reviews, and lost item recovery.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">6.2 Service Providers and Partners</h3>
+          <p>We share information with third-party service providers who help us operate our business, including payment processors, mapping and navigation providers, cloud hosting providers, analytics providers, background check providers, communication providers, customer support platforms, and marketing and advertising partners.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">6.3 Business Transfers</h3>
+          <p>If JSKGO is involved in a merger, acquisition, sale of assets, bankruptcy, or reorganization, your information may be transferred as part of that transaction.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">6.4 Legal Requirements</h3>
+          <p>We may disclose your information to comply with laws, regulations, court orders, or government requests; enforce our terms and conditions; protect the safety, rights, or property of JSKGO, our users, or the public; detect, prevent, or investigate fraud, security issues, or illegal activities; and respond to emergency situations.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">6.5 With Your Consent</h3>
+          <p>We may share information with third parties when you explicitly consent, such as sharing your ride details with someone you designate, participating in co-branded promotions or partner programs, or connecting your account to third-party apps or services.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">6.6 Aggregated and Anonymized Data</h3>
+          <p>We may share aggregated, anonymized, or de-identified data that cannot reasonably be used to identify you for research, analytics, marketing, or other business purposes.</p>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">7. Data Retention</h2>
+          <p>We retain your information for as long as necessary to provide our Services to you, comply with legal obligations, resolve disputes and enforce agreements, and maintain safety and security records.</p>
+          <p>Typically, we retain:</p>
+          <ul className="list-disc pl-6 space-y-2"><li>Account information: For the duration of your account plus 7 years after account closure.</li><li>Transaction records: For 7 years for tax and accounting purposes.</li><li>Location data: For 1 year after collection, except where longer retention is required for disputes or legal matters.</li><li>Support communications: For 3 years after resolution.</li></ul>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">8. Data Security</h2>
+          <p>We implement reasonable physical, technical, and administrative safeguards to protect your information, including encryption of data in transit and at rest, secure data centers with access controls, regular security assessments and audits, employee training on data protection, and multi-factor authentication for sensitive operations.</p>
+          <p>However, no system is completely secure. While we strive to protect your information, we cannot guarantee absolute security. You are responsible for maintaining the confidentiality of your account credentials.</p>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">9. Your Rights and Choices</h2>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">9.1 Access and Update Your Information</h3>
+          <p>You can access and update your account information through the JSKGO App settings. You may also contact us to request access to or correction of your personal information.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">9.2 Location Settings</h3>
+          <p>You can enable or disable location services through your device settings. Note that disabling location will prevent you from using core ride booking features.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">9.3 Marketing Communications</h3>
+          <p>You can opt out of promotional emails by clicking "unsubscribe" in any marketing email or updating your preferences in the app. You may continue to receive transactional messages related to your rides.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">9.4 Delete Your Account</h3>
+          <p>You can request account deletion through the app or by contacting us. Upon deletion, your account will be deactivated, personal information will be deleted or anonymized, and some information may be retained as required by law or for legitimate business purposes.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">9.5 Cookie Preferences</h3>
+          <p>You can manage cookie preferences through your browser settings. Disabling cookies may affect functionality.</p>
+          <h3 className="text-xl font-bold text-[#1A1A1A] dark:text-white mt-6 mb-3">9.6 Data Portability</h3>
+          <p>You can request a copy of your data in a structured, machine-readable format by contacting us.</p>
+
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">10. Children's Privacy</h2>
+          <p>Our Services are not intended for individuals under 18 years of age. We do not knowingly collect information from children. If you are under 18, do not use our Services or provide any information. If we learn we have collected information from a child under 18, we will delete it promptly.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">11. International Data Transfers</h2>
+          <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws. By using our Services, you consent to such transfers.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">12. Third-Party Services and Links</h2>
+          <p>Our Platform may contain links to third-party websites, apps, or services. This Policy does not apply to third-party services. We are not responsible for their privacy practices. Please review their privacy policies before providing information.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">13. Changes to This Privacy Policy</h2>
+          <p>We may update this Policy from time to time. We will notify you of material changes by posting the updated Policy on the JSKGO Platform with a new "Last Updated" date, sending an email notification to your registered email address, or displaying an in-app notification.</p>
+          <p>Your continued use of our Services after changes become effective constitutes acceptance of the updated Policy. We encourage you to review this Policy periodically.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">14. Contact Us</h2>
+          <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact our Grievance Officer:</p>
+          <ul className="list-disc pl-6 space-y-2"><li>Name: Mohit Garg</li><li>Email: <a href="mailto:nodaloffice@jskks.com" className="text-[#F4C430] hover:underline">nodaloffice@jskks.com</a></li><li>Company: JSKKS Ji Vrindavan Services Solution Private Limited</li><li>Website: <a href="https://jskgo.com/" target="_blank" rel="noopener noreferrer" className="text-[#F4C430] hover:underline">jskgo.com</a></li></ul>
+          <p>We will respond to your request within 30 days of receipt.</p>
+          <p className="font-semibold">JSKKS Ji Vrindavan Services Solution Private Limited<br />Last Updated: January 9, 2026<br />&copy; 2026 JSKGO. All rights reserved.</p>
           <Link to="/" className="inline-block mt-8 text-[#F4C430] font-bold hover:underline">&larr; Back to Home</Link>
         </div>
       </div>
@@ -1400,6 +1759,7 @@ function Sitemap() {
             <li><Link to="/#coverage" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Coverage</Link></li>
             <li><Link to="/terms" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Terms of Service</Link></li>
             <li><Link to="/privacy" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Privacy Policy</Link></li>
+            <li><Link to="/cookies" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Cookie Policy</Link></li>
           </ul>
         </div>
       </div>
@@ -1443,6 +1803,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/cookies" element={<Cookies />} />
         <Route path="/sitemap" element={<Sitemap />} />
       </Routes>
     </BrowserRouter>
