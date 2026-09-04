@@ -1,3 +1,5 @@
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import LocomotiveScroll from 'locomotive-scroll';
 import React, { useState, useEffect } from 'react';
 import { 
   MapPin,
@@ -238,7 +240,7 @@ const TestimonialsCarousel = () => {
 
 const CoverageVisual = () => {
   return (
-    <TiltCard className="relative h-[400px] lg:h-[500px] rounded-3xl bg-[#0a0a0a] border border-white/10 w-full overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.4)]">
+    <TiltCard className="relative h-[400px] lg:h-[500px] rounded-3xl bg-gray-900 dark:bg-[#0a0a0a] border border-black/10 dark:border-white/10 w-full overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.1)] dark:shadow-[0_30px_60px_rgba(0,0,0,0.4)] transition-colors duration-300">
       {/* Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]" />
       
@@ -392,9 +394,9 @@ const BookingSection = () => {
   };
 
   return (
-    <section id="book" className="booking-section py-24 relative bg-[#0a0a0a] text-white overflow-hidden border-t border-white/10">
+    <section id="book" className="booking-section py-24 relative bg-white dark:bg-[#0a0a0a] text-[#1A1A1A] dark:text-white overflow-hidden border-t border-gray-200 dark:border-white/10 transition-colors duration-300">
       {/* Background Watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.02] whitespace-nowrap pointer-events-none select-none z-0">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-black/[0.02] dark:text-white/[0.02] whitespace-nowrap pointer-events-none select-none z-0 transition-colors duration-300">
         YOUR RIDE
       </div>
       
@@ -406,7 +408,7 @@ const BookingSection = () => {
             className="text-center mb-12"
          >
            <h2 className="text-4xl lg:text-5xl font-extrabold mb-4">Where are you going?</h2>
-           <p className="text-xl text-gray-400">Choose your ride, enter your destination and get an instant fare estimate.</p>
+           <p className="text-xl text-gray-600 dark:text-gray-400 transition-colors duration-300">Choose your ride, enter your destination and get an instant fare estimate.</p>
          </motion.div>
 
          <motion.div
@@ -414,13 +416,13 @@ const BookingSection = () => {
            whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true }}
            transition={{ duration: 0.5 }}
-           className="booking-panel bg-[#151515] border border-white/10 rounded-3xl p-6 md:p-10 max-w-4xl mx-auto relative shadow-[0_0_80px_rgba(244,196,48,0.05)]"
+           className="booking-panel bg-gray-50 dark:bg-[#151515] border border-gray-200 dark:border-white/10 rounded-3xl p-6 md:p-10 max-w-4xl mx-auto relative shadow-[0_0_80px_rgba(244,196,48,0.05)] transition-colors duration-300"
          >
             {bookingStatus === 'idle' ? (
               <div className="flex flex-col gap-8">
                 
                 {/* Ride Selector */}
-                <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-4 md:grid md:grid-cols-4 md:pb-0">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-4 md:pb-0">
                   <AnimatePresence>
                   {rides.map(ride => {
                     const isSelected = selectedRide === ride.id;
@@ -428,11 +430,11 @@ const BookingSection = () => {
                       <button
                         key={ride.id}
                         onClick={() => setSelectedRide(ride.id)}
-                        className={`flex flex-col items-center justify-center p-4 rounded-2xl border transition-all duration-300 min-w-[120px] shrink-0 ${isSelected ? 'bg-[#F4C430] border-[#F4C430] text-black shadow-[0_0_20px_rgba(244,196,48,0.3)] scale-105' : 'bg-black/50 border-white/10 text-gray-400 hover:border-white/30 hover:bg-white/5'}`}
+                        className={`flex flex-col items-center justify-center p-4 rounded-2xl border transition-all duration-300 w-full ${isSelected ? 'bg-[#F4C430] border-[#F4C430] text-black shadow-[0_0_20px_rgba(244,196,48,0.3)] scale-[1.02]' : 'bg-white dark:bg-black/50 border-gray-200 dark:border-white/10 text-gray-800 dark:text-gray-300 hover:border-gray-300 dark:hover:border-white/30 hover:bg-gray-50 dark:hover:bg-white/5'}`}
                       >
                         <div className="mb-2">{ride.icon}</div>
                         <div className="font-bold text-lg mb-1">{ride.name}</div>
-                        <div className={`text-xs font-semibold ${isSelected ? 'text-black/70' : 'text-gray-500'}`}>{ride.rate}</div>
+                        <div className={`text-xs font-semibold ${isSelected ? 'text-black/70' : 'text-gray-500 dark:text-gray-400'}`}>{ride.rate}</div>
                       </button>
                     )
                   })}
@@ -443,41 +445,41 @@ const BookingSection = () => {
                 <div className="flex flex-col gap-4 relative">
                   <div className="absolute left-[23px] top-[30px] bottom-[30px] w-0.5 bg-[#F4C430]" />
                   <div className="flex items-center gap-4 relative z-10">
-                    <div className="w-12 h-12 rounded-full bg-[#222] border-2 border-[#F4C430] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-white dark:bg-[#222] border-2 border-[#F4C430] flex items-center justify-center shrink-0 transition-colors">
                       <div className="w-3 h-3 rounded-full bg-[#F4C430]" />
                     </div>
                     <div className="flex-1">
-                      <input type="text" value={pickup} onChange={e => setPickup(e.target.value)} placeholder="Enter pickup location in Mathura" className="w-full bg-[#222] border border-white/10 rounded-xl px-4 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#F4C430] transition-colors" />
+                      <input type="text" value={pickup} onChange={e => setPickup(e.target.value)} placeholder="Enter pickup location in Mathura" className="w-full bg-white dark:bg-[#222] border border-gray-200 dark:border-white/10 rounded-xl px-4 py-4 text-[#1A1A1A] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-[#F4C430] transition-colors" />
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4 relative z-10">
-                    <div className="w-12 h-12 rounded-full bg-[#222] border-2 border-[#F4C430] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-white dark:bg-[#222] border-2 border-[#F4C430] flex items-center justify-center shrink-0 transition-colors">
                       <MapPin size={20} className="text-[#F4C430]" />
                     </div>
                     <div className="flex-1">
-                      <input type="text" value={dropoff} onChange={e => setDropoff(e.target.value)} placeholder="Where are you going?" className="w-full bg-[#222] border border-white/10 rounded-xl px-4 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#F4C430] transition-colors" />
+                      <input type="text" value={dropoff} onChange={e => setDropoff(e.target.value)} placeholder="Where are you going?" className="w-full bg-white dark:bg-[#222] border border-gray-200 dark:border-white/10 rounded-xl px-4 py-4 text-[#1A1A1A] dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-[#F4C430] transition-colors" />
                     </div>
                   </div>
                 </div>
 
                 {/* Date & Passengers */}
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="flex-1 bg-[#222] border border-white/10 rounded-xl px-4 py-4 flex items-center gap-3">
+                  <div className="flex-1 bg-white dark:bg-[#222] border border-gray-200 dark:border-white/10 rounded-xl px-4 py-4 flex items-center gap-3 transition-colors">
                     <Calendar className="text-gray-400" size={20} />
-                    <input type="date" value={date} onChange={e => setDate(e.target.value)} className="w-full bg-transparent text-white outline-none [color-scheme:dark]" />
+                    <input type="date" value={date} onChange={e => setDate(e.target.value)} className="w-full bg-transparent text-[#1A1A1A] dark:text-white outline-none dark:[color-scheme:dark]" />
                   </div>
-                  <div className="flex-1 bg-[#222] border border-white/10 rounded-xl px-4 py-3 flex items-center justify-between">
-                    <div className="flex items-center gap-3 text-gray-400">
+                  <div className="flex-1 bg-white dark:bg-[#222] border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 flex items-center justify-between transition-colors">
+                    <div className="flex items-center gap-3 text-gray-500 dark:text-gray-400">
                       <User size={20} />
-                      <span className="text-white">Passengers</span>
+                      <span className="text-[#1A1A1A] dark:text-white">Passengers</span>
                     </div>
                     <div className="flex items-center gap-4">
-                      <button onClick={() => setPassengers(Math.max(1, passengers - 1))} className="w-8 h-8 rounded-full bg-black/50 flex items-center justify-center hover:bg-white/10 transition-colors">
+                      <button onClick={() => setPassengers(Math.max(1, passengers - 1))} className="w-8 h-8 rounded-full bg-gray-100 dark:bg-black/50 text-[#1A1A1A] dark:text-white flex items-center justify-center hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
                         <Minus size={16} />
                       </button>
-                      <span className="font-bold w-4 text-center">{passengers}</span>
-                      <button onClick={() => setPassengers(passengers + 1)} className="w-8 h-8 rounded-full bg-black/50 flex items-center justify-center hover:bg-white/10 transition-colors">
+                      <span className="font-bold w-4 text-center text-[#1A1A1A] dark:text-white">{passengers}</span>
+                      <button onClick={() => setPassengers(passengers + 1)} className="w-8 h-8 rounded-full bg-gray-100 dark:bg-black/50 text-[#1A1A1A] dark:text-white flex items-center justify-center hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
                         <Plus size={16} />
                       </button>
                     </div>
@@ -485,11 +487,11 @@ const BookingSection = () => {
                 </div>
 
                 {/* Fare Estimate */}
-                <div className="bg-[#222] border border-[#F4C430]/20 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="bg-white dark:bg-[#222] border border-[#F4C430]/20 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 transition-colors">
                   <div>
                     <div className="text-sm font-semibold text-[#F4C430] uppercase tracking-widest mb-1">Estimated Fare</div>
-                    <div className="text-4xl font-extrabold">{currentRideInfo.est}</div>
-                    <div className="text-sm text-gray-400 mt-2">No surge &middot; No hidden charges</div>
+                    <div className="text-4xl font-extrabold text-[#1A1A1A] dark:text-white">{currentRideInfo.est}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-2">No surge &middot; No hidden charges</div>
                   </div>
                   
                   <div className="w-full md:w-auto flex flex-col gap-3 items-center">
@@ -627,12 +629,12 @@ const EditorialHero = () => {
                </p>
                
                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                  <a href="#book" className="btn-hover btn-fill-yellow bg-white dark:bg-[#1a1a1a] border border-gray-900 dark:border-[#F4C430] text-gray-900 dark:text-[#F4C430] px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase flex items-center justify-center shadow-md dark:shadow-none">
+                  <Link to="/#book" className="btn-hover btn-fill-yellow bg-white dark:bg-[#1a1a1a] border border-gray-900 dark:border-[#F4C430] text-gray-900 dark:text-[#F4C430] px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase flex items-center justify-center shadow-md dark:shadow-none">
                      Book a Ride &rarr;
-                  </a>
-                  <a href="#app" className="btn-hover btn-fill-dark dark:btn-fill-white bg-transparent border border-gray-900 dark:border-white text-gray-900 dark:text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase flex items-center justify-center">
+                  </Link>
+                  <Link to="/#app" className="btn-hover btn-fill-dark dark:btn-fill-white bg-transparent border border-gray-900 dark:border-white text-gray-900 dark:text-white px-8 py-4 rounded-full font-bold text-sm tracking-widest uppercase flex items-center justify-center">
                      Download App
-                  </a>
+                  </Link>
                </div>
             </motion.div>
          </motion.div>
@@ -664,7 +666,7 @@ const EditorialHero = () => {
   );
 };
 
-export default function App() {
+function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(() => window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false);
@@ -674,6 +676,15 @@ export default function App() {
   const [rideDate, setRideDate] = useState('');
   const [passengers, setPassengers] = useState(1);
   const [bookingConfirmed, setBookingConfirmed] = useState(false);
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll();
+    window.locomotive = locomotiveScroll;
+    return () => {
+      locomotiveScroll.destroy();
+      delete window.locomotive;
+    };
+  }, []);
+
 
   useEffect(() => {
     if (isDark) {
@@ -776,9 +787,9 @@ export default function App() {
                 >
                   {isDark ? <Sun size={20} className="text-yellow-400" /> : <Moon size={20} className="text-gray-600" />}
                 </button>
-                <a href="#book" className={`btn-hover btn-fill-yellow bg-[#1A1A1A] dark:bg-white text-white dark:text-black rounded-full font-semibold shadow-lg shadow-black/10 ${isScrolled ? 'px-5 py-1.5 text-sm' : 'px-6 py-2.5 text-base'}`}>
+                <Link to="/#book" className={`btn-hover btn-fill-yellow bg-[#1A1A1A] dark:bg-white text-white dark:text-black rounded-full font-semibold shadow-lg shadow-black/10 ${isScrolled ? 'px-5 py-1.5 text-sm' : 'px-6 py-2.5 text-base'}`}>
                   Book Now
-                </a>
+                </Link>
               </motion.div>
 
               <div className="md:hidden flex items-center gap-2">
@@ -806,14 +817,14 @@ export default function App() {
             exit={{ opacity: 0, y: -20 }}
             className="md:hidden fixed inset-0 z-40 bg-white dark:bg-gray-900 pt-24 px-6 flex flex-col gap-6 text-xl font-semibold"
           >
-            <a href="#rides" onClick={() => setIsMobileMenuOpen(false)}>Rides</a>
-            <a href="#coverage" onClick={() => setIsMobileMenuOpen(false)}>Coverage</a>
-            <a href="#drive" onClick={() => setIsMobileMenuOpen(false)}>Drive With Us</a>
-            <a href="#app" onClick={() => setIsMobileMenuOpen(false)}>App</a>
-            <a href="#faq" onClick={() => setIsMobileMenuOpen(false)}>Help</a>
-            <a href="#book" onClick={() => setIsMobileMenuOpen(false)} className="btn-hover btn-fill-dark bg-[#F4C430] w-full py-4 rounded-xl mt-auto mb-12 shadow-lg text-center">
+            <Link to="/#rides" onClick={() => setIsMobileMenuOpen(false)}>Rides</Link>
+            <Link to="/#coverage" onClick={() => setIsMobileMenuOpen(false)}>Coverage</Link>
+            <Link to="/#drive" onClick={() => setIsMobileMenuOpen(false)}>Drive With Us</Link>
+            <Link to="/#app" onClick={() => setIsMobileMenuOpen(false)}>App</Link>
+            <Link to="/#faq" onClick={() => setIsMobileMenuOpen(false)}>Help</Link>
+            <Link to="/#book" onClick={() => setIsMobileMenuOpen(false)} className="btn-hover btn-fill-dark bg-[#F4C430] w-full py-4 rounded-xl mt-auto mb-12 shadow-lg text-center">
               Book a Ride
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
@@ -942,18 +953,18 @@ export default function App() {
       </section>
 
       {/* COVERAGE */}
-      <section id="coverage" className="coverage-section py-24 bg-[#1A1A1A] dark:bg-black text-white overflow-hidden relative">
+      <section id="coverage" className="coverage-section py-24 bg-gray-50 dark:bg-black text-[#1A1A1A] dark:text-white overflow-hidden relative transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl lg:text-5xl font-extrabold mb-6 leading-tight">We Serve All of <span className="text-[#F4C430]">Braj & North India</span></h2>
-              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
                 Whether you need a quick ride across town or a comfortable outstation cab, our verified network spans across key cities and sacred towns.
               </p>
               
               <div className="flex flex-wrap gap-3">
                 {['Mathura', 'Vrindavan', 'Govardhan', 'Barsana', 'Nandgaon', 'Gokul', 'Agra', 'Delhi NCR'].map(city => (
-                  <span key={city} className="bg-white/10 px-4 py-2 rounded-full font-medium text-sm border border-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors">
+                  <span key={city} className="bg-gray-200 dark:bg-white/10 px-4 py-2 rounded-full font-medium text-sm border border-gray-300 dark:border-white/10 backdrop-blur-sm hover:bg-gray-300 dark:hover:bg-white/20 transition-colors">
                     {city}
                   </span>
                 ))}
@@ -1043,24 +1054,24 @@ export default function App() {
       <TestimonialsCarousel />
 
       {/* APP SECTION */}
-      <section id="app" className="app-section py-24 bg-[#1A1A1A] dark:bg-black text-white border-t border-white/5">
+      <section id="app" className="app-section py-24 bg-gray-50 dark:bg-black text-[#1A1A1A] dark:text-white border-t border-gray-200 dark:border-white/5 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl lg:text-6xl font-extrabold mb-6">Your Ride.<br/>One Tap Away.</h2>
-              <p className="text-xl text-gray-400 mb-10 leading-relaxed">
+              <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 leading-relaxed">
                 Download the JSKGO app for the fastest booking experience, real-time tracking, and exclusive offers.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://play.google.com/store/apps/details?id=com.user.jskks&hl=en_IN" target="_blank" rel="noopener noreferrer" className="btn-hover btn-fill-light bg-white text-black px-6 py-4 rounded-xl font-bold flex items-center justify-center gap-3">
+                <a href="https://play.google.com/store/apps/details?id=com.user.jskks&hl=en_IN" target="_blank" rel="noopener noreferrer" className="btn-hover btn-fill-dark dark:btn-fill-light bg-black dark:bg-white text-white dark:text-black px-6 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-colors">
                   <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 01-.61-.986V2.8a1.986 1.986 0 01.61-.986zM14.772 13l6.505 3.745c.983.566.983 1.488 0 2.054l-1.393.802L14.772 13zm-1.01-1l-9.155-9.155L19.884 4.4l-6.122 3.6zm.968-.95l5.106-2.94-1.393-.802c-.983-.566-2.58-.566-3.563 0l-6.282 3.615 6.132 6.132z"/></svg>
                   <div className="text-left leading-tight">
                     <div className="text-xs opacity-70 font-medium">Download for</div>
                     <div className="text-lg">Customer App — Android</div>
                   </div>
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.driver.jskks&hl=en_IN" target="_blank" rel="noopener noreferrer" className="btn-hover btn-fill-light bg-white text-black px-6 py-4 rounded-xl font-bold flex items-center justify-center gap-3">
+                <a href="https://play.google.com/store/apps/details?id=com.driver.jskks&hl=en_IN" target="_blank" rel="noopener noreferrer" className="btn-hover btn-fill-dark dark:btn-fill-light bg-black dark:bg-white text-white dark:text-black px-6 py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-colors">
                   <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.986 1.986 0 01-.61-.986V2.8a1.986 1.986 0 01.61-.986zM14.772 13l6.505 3.745c.983.566.983 1.488 0 2.054l-1.393.802L14.772 13zm-1.01-1l-9.155-9.155L19.884 4.4l-6.122 3.6zm.968-.95l5.106-2.94-1.393-.802c-.983-.566-2.58-.566-3.563 0l-6.282 3.615 6.132 6.132z"/></svg>
                   <div className="text-left leading-tight">
                     <div className="text-xs opacity-70 font-medium">Are you a captain?</div>
@@ -1215,12 +1226,12 @@ export default function App() {
           <h2 className="text-4xl lg:text-6xl font-extrabold mb-6">Where are you going?</h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-10">Your next ride is just a tap away.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#book" className="btn-hover btn-fill-dark bg-[#F4C430] text-black px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
+            <Link to="/#book" className="btn-hover btn-fill-dark bg-[#F4C430] text-black px-8 py-4 rounded-xl font-bold text-lg shadow-lg">
               Book a Ride
-            </a>
-            <a href="#app" className="btn-hover btn-fill-light bg-gray-100 dark:bg-white/10 text-[#1A1A1A] dark:text-white border border-gray-200 dark:border-white/20 px-8 py-4 rounded-xl font-bold text-lg">
+            </Link>
+            <Link to="/#app" className="btn-hover btn-fill-light bg-gray-100 dark:bg-white/10 text-[#1A1A1A] dark:text-white border border-gray-200 dark:border-white/20 px-8 py-4 rounded-xl font-bold text-lg">
               Download App
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -1237,32 +1248,32 @@ Mathura's homegrown ride platform — bike taxi, auto & cab booking for the Braj
 
               </p>
               <div className="flex gap-4">
-                <a href="#footer" aria-label="JSKGO on LinkedIn" className="w-10 h-10 rounded-full bg-white dark:bg-white/10 hover:bg-[#F4C430] hover:text-black flex items-center justify-center transition-colors">
+                <Link to="/#footer" aria-label="JSKGO on LinkedIn" className="w-10 h-10 rounded-full bg-white dark:bg-white/10 hover:bg-[#F4C430] hover:text-black flex items-center justify-center transition-colors">
                   <SocialIcon type="linkedin" />
-                </a>
-                <a href="#footer" aria-label="JSKGO on Twitter" className="w-10 h-10 rounded-full bg-white dark:bg-white/10 hover:bg-[#F4C430] hover:text-black flex items-center justify-center transition-colors">
+                </Link>
+                <Link to="/#footer" aria-label="JSKGO on Twitter" className="w-10 h-10 rounded-full bg-white dark:bg-white/10 hover:bg-[#F4C430] hover:text-black flex items-center justify-center transition-colors">
                   <SocialIcon type="twitter" />
-                </a>
-                <a href="#footer" aria-label="JSKGO on Instagram" className="w-10 h-10 rounded-full bg-white dark:bg-white/10 hover:bg-[#F4C430] hover:text-black flex items-center justify-center transition-colors">
+                </Link>
+                <Link to="/#footer" aria-label="JSKGO on Instagram" className="w-10 h-10 rounded-full bg-white dark:bg-white/10 hover:bg-[#F4C430] hover:text-black flex items-center justify-center transition-colors">
                   <SocialIcon type="instagram" />
-                </a>
+                </Link>
               </div>
             </div>
             
             <div>
               <h4 className="font-bold mb-6 text-lg">Quick Links</h4>
               <ul className="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
-                <li><a href="#rides" className="hover:text-black dark:hover:text-white transition-colors">Ride Types</a></li>
-                <li><a href="#coverage" className="hover:text-black dark:hover:text-white transition-colors">Coverage</a></li>
-                <li><a href="#drive" className="hover:text-black dark:hover:text-white transition-colors">Drive With Us</a></li>
-                <li><a href="#app" className="hover:text-black dark:hover:text-white transition-colors">App</a></li>
+                <li><Link to="/#rides" className="hover:text-black dark:hover:text-white transition-colors">Ride Types</Link></li>
+                <li><Link to="/#coverage" className="hover:text-black dark:hover:text-white transition-colors">Coverage</Link></li>
+                <li><Link to="/#drive" className="hover:text-black dark:hover:text-white transition-colors">Drive With Us</Link></li>
+                <li><Link to="/#app" className="hover:text-black dark:hover:text-white transition-colors">App</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-6 text-lg">Support</h4>
               <ul className="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
-                <li><a href="#faq" className="hover:text-black dark:hover:text-white transition-colors">Help Center</a></li>
+                <li><Link to="/#faq" className="hover:text-black dark:hover:text-white transition-colors">Help Center</Link></li>
                 <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Contact Us</a></li>
                 <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Safety</a></li>
               </ul>
@@ -1271,8 +1282,8 @@ Mathura's homegrown ride platform — bike taxi, auto & cab booking for the Braj
             <div>
               <h4 className="font-bold mb-6 text-lg">Legal</h4>
               <ul className="space-y-4 text-gray-600 dark:text-gray-400 font-medium">
-                <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><Link to="/terms" className="hover:text-black dark:hover:text-white transition-colors">Terms of Service</Link></li>
+                <li><Link to="/privacy" className="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</Link></li>
                 <li><a href="#" className="hover:text-black dark:hover:text-white transition-colors">Cookie Policy</a></li>
               </ul>
             </div>
@@ -1282,9 +1293,9 @@ Mathura's homegrown ride platform — bike taxi, auto & cab booking for the Braj
             <div>© 2025 JSKGO. All rights reserved. | Cab & Bike Taxi Booking in Mathura
 </div>
             <div className="flex items-center gap-5">
-              <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Terms</a>
-              <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Sitemap</a>
+              <Link to="/terms" className="hover:text-black dark:hover:text-white transition-colors">Terms</Link>
+              <Link to="/privacy" className="hover:text-black dark:hover:text-white transition-colors">Privacy Policy</Link>
+              <Link to="/sitemap" className="hover:text-black dark:hover:text-white transition-colors">Sitemap</Link>
             </div>
           </div>
         </div>
@@ -1292,9 +1303,9 @@ Mathura's homegrown ride platform — bike taxi, auto & cab booking for the Braj
 
       {/* STICKY MOBILE BOOK BUTTON */}
       <div className="md:hidden fixed bottom-6 inset-x-6 z-40">
-        <a href="#book" className="btn-hover btn-fill-dark w-full bg-[#F4C430] text-black py-4 rounded-xl font-bold text-lg shadow-2xl flex items-center justify-center gap-2">
+        <Link to="/#book" className="btn-hover btn-fill-dark w-full bg-[#F4C430] text-black py-4 rounded-xl font-bold text-lg shadow-2xl flex items-center justify-center gap-2">
           Book a Ride <ArrowRight size={20} />
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -1335,5 +1346,105 @@ function FAQItem({ question, answer }) {
         )}
       </AnimatePresence>
     </div>
+  );
+}
+
+
+function Terms() {
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
+      <div className="max-w-4xl mx-auto prose dark:prose-invert">
+        <h1 className="text-4xl lg:text-5xl font-extrabold mb-8 text-[#1A1A1A] dark:text-white">Terms of Service</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">Last updated: September 2026</p>
+        <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300">
+          <p>Welcome to JSKGO. By accessing or using our platform, you agree to be bound by these terms.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">1. Acceptance of Terms</h2>
+          <p>By downloading our app or using our services, you confirm that you accept these terms of service.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">2. User Conduct</h2>
+          <p>Users are expected to behave respectfully towards captains and follow all safety guidelines.</p>
+          <Link to="/" className="inline-block mt-8 text-[#F4C430] font-bold hover:underline">&larr; Back to Home</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Privacy() {
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
+      <div className="max-w-4xl mx-auto prose dark:prose-invert">
+        <h1 className="text-4xl lg:text-5xl font-extrabold mb-8 text-[#1A1A1A] dark:text-white">Privacy Policy</h1>
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">Last updated: September 2026</p>
+        <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300">
+          <p>Your privacy is important to us. This policy outlines how we collect, use, and protect your data.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">1. Data Collection</h2>
+          <p>We collect location data to provide rides and contact information for account management.</p>
+          <h2 className="text-2xl font-bold text-[#1A1A1A] dark:text-white mt-8 mb-4">2. Data Security</h2>
+          <p>All personal information is encrypted and stored securely.</p>
+          <Link to="/" className="inline-block mt-8 text-[#F4C430] font-bold hover:underline">&larr; Back to Home</Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Sitemap() {
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl lg:text-5xl font-extrabold mb-8 text-[#1A1A1A] dark:text-white">Sitemap</h1>
+        <div className="bg-white dark:bg-[#1A1A1A] rounded-3xl p-8 border border-gray-200 dark:border-white/10 shadow-sm">
+          <ul className="space-y-4 text-xl font-medium">
+            <li><Link to="/" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Home</Link></li>
+            <li><Link to="/#rides" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Rides</Link></li>
+            <li><Link to="/#coverage" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Coverage</Link></li>
+            <li><Link to="/terms" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Terms of Service</Link></li>
+            <li><Link to="/privacy" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Privacy Policy</Link></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          if (window.locomotive) {
+            window.locomotive.scrollTo(element, { duration: 0, disableLerp: true, immediate: true });
+          } else {
+            element.scrollIntoView({ behavior: 'auto' });
+          }
+        }
+      }, 50);
+    } else {
+      if (window.locomotive) {
+        window.locomotive.scrollTo(0, { duration: 0, disableLerp: true, immediate: true });
+      } else {
+        window.scrollTo(0, 0);
+      }
+    }
+  }, [pathname, hash]);
+
+  return null;
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/sitemap" element={<Sitemap />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
