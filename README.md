@@ -1,6 +1,6 @@
-# React + Vite
+# JSKGO
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+JSKGO is a React and Vite ride-booking website for customers and captains across the Braj region. It provides ride estimates, coverage details, support contacts, legal policies, and an enquiry form.
 
 Currently, two official plugins are available:
 
@@ -13,4 +13,46 @@ The React Compiler is not enabled on this template because of its impact on dev 
 
 ## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Features
+
+- Responsive landing page with light and dark themes
+- Ride booking form with vehicle selection, fare estimates, and validation
+- Coverage for Mathura City, Vrindavan, Govardhan, Barsana, Nandgaon, Gokul, Baldeo, and Agra
+- Animated hero, coverage visual, testimonials, and experience cards
+- Click-to-call support and direct enquiry email handoff
+- Terms of Service, Privacy Policy, Cookie Policy, and Sitemap routes
+
+## Getting Started
+
+Requirements: Node.js 18 or newer and npm.
+
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL shown by Vite, usually `http://localhost:5173`.
+
+## Available Commands
+
+```bash
+npm run dev      # Start the development server
+npm run build    # Create a production build
+npm run preview  # Preview the production build locally
+npm run lint     # Run Oxlint
+```
+
+## Routes
+
+- `/` - Main JSKGO landing page
+- `/terms` - Terms of Service
+- `/privacy` - Privacy Policy
+- `/cookies` - Cookie Policy
+- `/enquiry` - Customer enquiry form
+- `/sitemap` - Site navigation index
+
+## Contact
+
+- Phone: `+91 96343 64324`
+- Email: `support@jskks.com`
+- Location: Mathura, Uttar Pradesh - 281001
