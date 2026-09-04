@@ -806,6 +806,9 @@ function Home() {
                 <Link to="/#book" className={`btn-hover btn-fill-yellow bg-[#1A1A1A] dark:bg-white text-white dark:text-black rounded-full font-semibold shadow-lg shadow-black/10 ${isScrolled ? 'px-5 py-1.5 text-sm' : 'px-6 py-2.5 text-base'}`}>
                   Book Now
                 </Link>
+                <Link to="/enquiry" className={`btn-hover btn-fill-yellow border border-[#F4C430] text-[#1A1A1A] dark:text-[#F4C430] rounded-full font-semibold ${isScrolled ? 'px-4 py-1.5 text-sm' : 'px-5 py-2.5 text-base'}`}>
+                  Enquire Now
+                </Link>
               </motion.div>
 
               <div className="md:hidden flex items-center gap-2">
@@ -839,6 +842,9 @@ function Home() {
             <Link to="/#app" onClick={() => setIsMobileMenuOpen(false)}>App</Link>
             <Link to="/#faq" onClick={() => setIsMobileMenuOpen(false)}>Help</Link>
             <Link to="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+            <Link to="/enquiry" onClick={() => setIsMobileMenuOpen(false)} className="btn-hover btn-fill-yellow border border-[#F4C430] text-[#1A1A1A] dark:text-[#F4C430] w-full py-4 rounded-xl text-center">
+              Enquire Now
+            </Link>
             <Link to="/#book" onClick={() => setIsMobileMenuOpen(false)} className="btn-hover btn-fill-dark bg-[#F4C430] w-full py-4 rounded-xl mt-auto mb-12 shadow-lg text-center">
               Book a Ride
             </Link>
@@ -1568,6 +1574,60 @@ function Cookies() {
   );
 }
 
+function Enquiry() {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = formData.get('name');
+    const mobile = formData.get('mobile');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    const subject = encodeURIComponent(`New enquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nMobile: ${mobile}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+    window.location.href = `mailto:support@jskks.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-12">
+          <p className="text-sm font-bold tracking-[0.25em] text-[#F4C430] uppercase mb-4">JSKGO Support</p>
+          <h1 className="text-4xl lg:text-5xl font-extrabold mb-4 text-[#1A1A1A] dark:text-white">Send an Enquiry</h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400">Tell us how we can help. Our team will get back to you shortly.</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="bg-white dark:bg-[#1A1A1A] border border-gray-200 dark:border-white/10 rounded-3xl p-6 md:p-10 shadow-xl space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <label className="font-semibold text-[#1A1A1A] dark:text-white">Full Name
+              <input name="name" type="text" required placeholder="Enter your name" className="mt-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#222] px-4 py-3 font-normal text-[#1A1A1A] dark:text-white placeholder-gray-400 outline-none focus:border-[#F4C430]" />
+            </label>
+            <label className="font-semibold text-[#1A1A1A] dark:text-white">Mobile Number
+              <input name="mobile" type="tel" required placeholder="+91 00000 00000" className="mt-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#222] px-4 py-3 font-normal text-[#1A1A1A] dark:text-white placeholder-gray-400 outline-none focus:border-[#F4C430]" />
+            </label>
+          </div>
+          <label className="block font-semibold text-[#1A1A1A] dark:text-white">Email Address
+            <input name="email" type="email" required placeholder="you@example.com" className="mt-2 w-full rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#222] px-4 py-3 font-normal text-[#1A1A1A] dark:text-white placeholder-gray-400 outline-none focus:border-[#F4C430]" />
+          </label>
+          <label className="block font-semibold text-[#1A1A1A] dark:text-white">Message
+            <textarea name="message" required rows="6" placeholder="How can we help you?" className="mt-2 w-full resize-y rounded-xl border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-[#222] px-4 py-3 font-normal text-[#1A1A1A] dark:text-white placeholder-gray-400 outline-none focus:border-[#F4C430]" />
+          </label>
+          <button type="submit" className="btn-hover btn-fill-dark w-full rounded-xl bg-[#F4C430] px-8 py-4 text-lg font-bold text-black shadow-lg">
+            Send Enquiry <ArrowRight size={20} className="inline ml-2" />
+          </button>
+          {submitted && <p className="text-center text-sm font-semibold text-green-600" aria-live="polite">Your email app should open with the enquiry ready to send.</p>}
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400">You can also call <a href="tel:+919634364324" className="text-[#F4C430] hover:underline">+91 96343 64324</a>.</p>
+        </form>
+
+        <Link to="/" className="block mt-8 text-center text-[#F4C430] font-bold hover:underline">&larr; Back to Home</Link>
+      </div>
+    </div>
+  );
+}
+
 function Privacy() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-[#121212] pt-32 px-4 sm:px-6 lg:px-8 pb-24 text-gray-900 dark:text-gray-100 font-sans selection:bg-[#F4C430] selection:text-black transition-colors duration-300">
@@ -1760,6 +1820,7 @@ function Sitemap() {
             <li><Link to="/terms" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Terms of Service</Link></li>
             <li><Link to="/privacy" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Privacy Policy</Link></li>
             <li><Link to="/cookies" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Cookie Policy</Link></li>
+            <li><Link to="/enquiry" className="text-gray-800 dark:text-gray-200 hover:text-[#F4C430] dark:hover:text-[#F4C430] transition-colors">Enquiry</Link></li>
           </ul>
         </div>
       </div>
@@ -1804,6 +1865,7 @@ export default function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/cookies" element={<Cookies />} />
+        <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/sitemap" element={<Sitemap />} />
       </Routes>
     </BrowserRouter>
